@@ -1,0 +1,23 @@
+Here is a css == cascading syle sheets.
+
+mostly css is used to design websites.
+
+there are three types of css are there:
+1.Inline css  -> Inline css is structured in body tag itself
+2.Internal css -> It is css which is structured in head tag in the same file of html
+3.External css -> It is css which decleared with the css extension and externally.
+
+there are various types of selectors ->
+like 
+selector means we can triggered the design which we want to make by using various tags in html like img,body,h1,h2,h3,etc.
+
+also we can use selectors by using classes and id's
+
+1.class names are used various times or for datas.
+2.but id's are unique  for that specific member.
+
+/* This is a single-line comment */
+p {
+  color: red;
+}
+here is a "p" which has given a color red
