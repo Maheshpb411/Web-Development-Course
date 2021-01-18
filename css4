@@ -1,0 +1,23 @@
+css position property ->
+
+there are 4 types of position property
+1.static -> is is a bydefault. when don't use any css in html the position present at that time is nothing but static.
+
+2.relative -> relative: Positions the element relative to its normal positon and will leave a gap at its normal position.
+              but it doesn't affect the another element present aside of it.
+              if we write --
+              p{
+                position : relative;    --> it will doesn' affect any thing
+                left : 20px;     -->now it will affect the css design.
+              }
+
+3.absolute -> 
+
+4.fixed ->  Positions the element relative to the browser window.
+
+5.sticky -> Positions the element relative to the users scroll position.
+
+also we can centre the elements by making text-align : centre;
+
+
+
