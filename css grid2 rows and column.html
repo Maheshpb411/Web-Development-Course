@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid2</title>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-rows: 1fr 1fr 4fr;  /*first 1fr is for first row seconde 1fr is for second row and third 4fr is for third row*/
+            grid-auto-rows: 3fr;   /*and for remaining rows like 4th,5th,6th are settle for 3fr property by using auto*/
+            grid-template-columns: 1fr 3fr 2fr;
+            grid-gap: 0.5rem;
+        }
+
+        .box {
+            background-color: red;
+            border: 2px solid black;
+            /* margin:2px; */
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <div class="box">this is a box1</div>
+        <div class="box">this is a box2</div>
+        <div class="box">this is a box3</div>
+        <div class="box">this is a box4</div>
+        <div class="box">this is a box5</div>
+        <div class="box">this is a box6</div>
+        <div class="box">this is a box7</div>
+        <div class="box">this is a box8</div>
+        <div class="box">this is a box9</div>
+        <div class="box">this is a box10</div>
+    </div>
+</body>
+
+</html>
