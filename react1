@@ -93,3 +93,20 @@ Reactdom.render(
   document.getElementById("root")
 );
 
+we can implement again js in inner html
+another -->
+
+const name = "mahesh";
+const num = 4;
+
+Reactdom.render(
+  <div>
+    <h1>hello {name}</h1>
+    <p>your lucky number is {num}</p>     ------here
+  </div>,
+  document.getElementById("root")
+);
+
+but we cannot implement actual js in innerhtml
+
+
