@@ -67,6 +67,8 @@ document.getElementById("root").appendChild(h1);
 // so this is the advantages of react.
 
 
+and these all are the expressions in es6 and js
+
 Reactdom.render(
   <div>
     <h1>hello world</h1>
