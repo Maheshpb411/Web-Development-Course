@@ -75,3 +75,21 @@ Reactdom.render(
 )
 
 and this is how we can inject the html into js by using react.
+
+
+
+
+second react -->
+
+Reactdom.render(
+  <div>
+    <h1>My Favourite Foods</h1>
+    <ul>
+      <li>Bacon</li>
+      <li>mango</li>
+      <li>guava</li>
+    </ul>
+  </div>,
+  document.getElementById("root")
+);
+
