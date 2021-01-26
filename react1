@@ -111,4 +111,17 @@ Reactdom.render(
 
 but we cannot implement actual js in innerhtml
 
+import React from "react";
+import Reactdom from "react-dom";
 
+const name = "mahesh";
+const currentdate = new Date();
+const year = currentdate.getFullYear();
+
+Reactdom.render(
+  <div>
+    <p>created by {name}</p>
+    <p>copyright {year}</p>
+  </div>,
+  document.getElementById("root")
+);
