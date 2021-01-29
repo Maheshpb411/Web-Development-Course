@@ -1,0 +1,237 @@
+import React from "react";
+import ReactDOM from "react-dom";
+
+const rootElement = document.getElementById("root");
+const design = {
+  color: "red",
+  fontSize: "30px",
+  border: "1px solid blue"
+};
+
+// also we can change the property by below method
+design.color = "green";
+ReactDOM.render(
+  <div>
+    <h1 style={design}>hello world!</h1>
+    {/* which is nothing but a css inline styling with jsx */}
+  </div>,
+  rootElement
+);
+
+
+index.html file --->>>
+
+<title>React App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+    <script src="../src/index.js" type="text/JSX"></script>
+    
+    index.js file ----->>>>
+import React from "react";
+import ReactDOM from "react-dom";
+
+const rootElement = document.getElementById("root");
+
+const date = new Date();
+const currentTime = date.getHours();
+
+let greeting;
+
+const design = {
+  color: ""
+};
+
+if (currentTime < 12) {
+  greeting = "good morning";
+  design.color = "red";
+} else if (currentTime < 18) {
+  greeting = "good afternoon";
+  design.color = "green";
+} else {
+  greeting = "good night";
+  design.color = "blue";
+}
+
+ReactDOM.render(
+  <div>
+    <h1 className="heading" style={design}>
+      {greeting}
+    </h1>
+    {/* which is nothing but a css inline styling with jsx */}
+  </div>,
+  rootElement
+);    
+
+
+
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+react components ---->>>>
+
+import React from "react";
+import ReactDOM from "react-dom";
+
+const col = {
+  color: "red"
+};
+function Heading(){
+  return <h1 style={col}>My favourite fruits</h1>;
+}
+function List(){
+   return <ul>
+   <li>Guave</li>
+   <li>Mango</li>
+   <li>Grapes</li>
+ </ul>;
+}
+
+// noting that here function name is always starts with capital letter
+
+const helo = document.getElementById("root");
+ReactDOM.render(
+  <div> 
+      <Heading />
+      <List />
+  </div>,
+   helo
+);
+
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+index.js
+
+import React from "react";
+import ReactDOM from "react-dom";
+import Heading from "./heading";
+import List from "./list";
+
+
+// noting that here function name is always starts with capital letter
+
+const helo = document.getElementById("root");
+ReactDOM.render(
+  <div> 
+      <Heading />
+      <List />
+  </div>,
+   helo
+);
+---------------------------------------
+Heading.jsx
+
+import react from "react";
+
+const col = {
+  color: "red"
+};
+function Heading(){
+  return <h1 style={col}>My favourite fruits</h1>;
+}
+
+export default Heading;
+--------------------------------------
+List.jsx
+
+import react from "react";
+
+
+function List(){
+  return <ul>
+  <li>Guave</li>
+  <li>Mango</li>
+  <li>Grapes</li>
+</ul>;
+}
+
+// we cannot implement both functions ina single .jsx file
+
+export default List;
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+
+index.js --->>>
+
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./component/app";
+
+ReactDOM.render(
+   <App />,document.getElementById("root")
+);   
+
+----------------------
+
+App.jsx ------>>>
+
+import react from "react";
+import Heading2 from "./heading2";
+
+function App() {
+  return <Heading2 />;
+}
+
+export default App;
+
+-------------------------
+
+heading2.jsx ----->>>>>
+
+import react from "react";
+
+function Heading2() {
+  //const rootElement = document.getElementById("root");
+
+  const date = new Date();
+  const currentTime = date.getHours();
+
+  let greeting;
+
+  const design = {
+    color: ""
+  };
+
+  if (currentTime < 12) {
+    greeting = "good morning";
+    design.color = "red";
+  } else if (currentTime < 18) {
+    greeting = "good afternoon";
+    design.color = "green";
+  } else {
+    greeting = "good night";
+    design.color = "blue";
+  }
+
+  return <h1 className="heading" style={design}>
+      {greeting}
+    </h1>;
+  
+}
+
+export default Heading2;
+ ------------------------------------------------------------------------------------------------
+ ------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
