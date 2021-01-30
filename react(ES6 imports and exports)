@@ -1,0 +1,168 @@
+index.js------->>>>>>>>>
+
+import React, { StrictMode } from "react";
+import ReactDOM from "react-dom";
+
+import App from "./App";
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(
+  <div>
+    <App />
+  </div>,
+  rootElement
+);
+
+-----------
+App.js ---->>>
+import React from "react";
+// import "./styles.css";
+import pa from "./pi.js";
+
+function App() {
+  return (
+    <div className="App">
+      <ul>
+        <li>{pa}</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+    </div>
+  );
+}
+export default App;
+
+----------
+pi.js
+
+const pi = 3.14;
+
+export default pi;
+
+------------------------------------------------------------
+------------------------------------------------------------
+index.js------->>>>>>>>>
+
+import React, { StrictMode } from "react";
+import ReactDOM from "react-dom";
+
+import App from "./App";
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(
+  <div>
+    <App />
+  </div>,
+  rootElement
+);
+
+------------
+
+App.js------>>>>>>>>>
+
+import React from "react";
+// import "./styles.css";
+import pa, { double, triple } from "./pi.js";
+
+function App() {
+  return (
+    <div className="App">
+      <ul>
+        <li>{pa}</li>
+        <li>{double()}</li>
+        <li>{triple()}</li>
+      </ul>
+    </div>
+  );
+}
+export default App;
+----------------
+
+pi.js------------->>>>>>>>
+
+const pi = 3.14;
+
+function double(){
+  return pi * 2;
+}
+function triple(){
+  return pi * 3;
+}
+
+export default pi;
+export {double,triple}
+----------------------------------------------------
+----------------------------------------------------
+
+****there are different types of imports which we are used in App.js file
+
+like
+import * from "pi.js"   ===>>which means that we are iimported all things which are in "ni.js"
+after that we have to call those things by references.
+
+--------------------------------------------------
+--------------------------------------------------
+
+practice for ES^ imports and exports
+
+App.js-->>>>>>>>>>
+
+// import React from "react";
+// // import "./styles.css";
+// import { add, multiply, substract, divide } from "./pi.js";
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <ul>
+//         <li>{add(1, 2)}</li>
+//         <li>{multiply(2, 3)}</li>
+//         <li>{substract(7, 2)}</li>
+//         <li>{divide(5, 2)}</li>
+//       </ul>
+//     </div>
+//   );
+// }
+ export default App;
+
+//  or
+
+import React from "react";
+// import "./styles.css";
+//import { add, multiply, substract, divide } from "./pi.js";
+import * as amsd from "./pi.js";
+function App() {
+  return (
+    <div className="App">
+      <ul>
+        <li>{amsd.add(1, 2)}</li>
+        <li>{amsd.multiply(2, 3)}</li>
+        <li>{amsd.substract(7, 2)}</li>
+        <li>{amsd.divide(5, 2)}</li>
+      </ul>
+    </div>
+  );
+}                
+
+--------------------
+ni.js-->>>>>>
+
+function add(a,b){
+  return a+b;
+}
+
+function substract(a,b){
+  return a-b;
+}
+function multiply(a,b){
+  return a*b;
+}
+function divide(a,b){
+  return a/b;
+}
+
+export {add,multiply,substract,divide};
+-----------------------------------------------------------
+-----------------------------------------------------------
+
+
