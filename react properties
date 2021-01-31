@@ -29,6 +29,15 @@ ReactDOM.render(
        tel="13234574545"
        email="dpmahesh@fgsedfk.com"
       />
+      
+       <Card 
+        name="rashmika"
+        img="https://pbs.twimg.com/profile_images/1228229505430388738/iRZK2vOz.jpg"
+        tel="34557878"
+        email="xgfhbcvb@sefrg"
+      />
+      
+      ///////////in this way we can use various cards for making contacts web page using single function
     </div>,
      document.getElementById("root")
 );
