@@ -1,0 +1,169 @@
+index.html------->>>>>>>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <title>React App</title>
+  </head>
+  <body>
+   <script>src="./src/index.js" type ="text/jsx"</script>
+   <link rel="stylesheet" href="styles.css">
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
+
+---------------------------------------------
+---------------------------------------------
+
+index.js----->>>
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from "./App.jsx";
+
+ReactDOM.render(<App/>,document.getElementById("root"));
+
+---------------------------------------------
+---------------------------------------------
+
+styles.css---->>>>
+
+body{
+    font-family: sans-serif;
+    margin: 0 auto;
+    padding: 25px;
+    
+    width:400px;
+    background-color: #dfe6e9;
+    text-align: center;
+}
+.name{
+    position:absolute;
+    left:8px;
+    top:18px;
+}
+
+
+.container{
+    border-radius: 25px;
+    position:relative;
+    padding:25px 15px;
+    background-color: #81ecec;
+    margin:50px 0;
+    height: 150px;
+    text-align: left;
+    
+
+}
+.top{
+   border-radius: 25px 25px 0 0;
+   height: 100px;
+   width: 100%;
+   background-color: #00cec9;
+   position:absolute;
+   top:0;
+   left:0;
+   /* display:flex; */
+}
+
+.container img{
+    /* margin:px 0px 0 0; */
+    width:100px;
+    height: 100px;
+    position:absolute;
+    right:20px;
+    top:40px;
+    border-radius: 100%;
+
+}
+.bottom{
+    margin-top: 100;
+}
+   
+--------------------------------------------
+--------------------------------------------
+
+App.js---->>>>>>>
+
+import react from "react";
+import Cards from "./Cards.jsx";
+import contacts from "./contacts";
+
+
+function App() {
+  return (
+    <div>
+      <h1>My contacts</h1>
+    
+      <Cards
+        name={contacts[0].name}
+        img={contacts[0].imgURL}
+        tel={contacts.[0].tel}
+        email={contacts[0].email}
+      />
+      <Cards
+        name={contacts[1].name}
+        img={contacts[1].imgURL}
+        tel={contacts.[1].tel}
+        email={contacts[1].email}
+      />
+      
+    </div>
+  );
+}
+
+export default App;
+------------------------------------------
+------------------------------------------
+
+Cards.jsx--------->>>>>
+
+import React from "react";
+import Reactdom from "react-dom";
+// import Card from "./App2";
+
+function Cards(props) {
+    return (
+        <div className="container">
+            <div className="top">
+                <h2 className="name">{props.name}</h2>
+                <img
+                    src={props.img}
+                />
+            </div>
+            <div className="bottom">
+                <p>{props.tel}</p>
+                <p>{props.email}</p>
+            </div>
+
+        </div>
+    )
+}
+export default Cards;
+-----------------------------------------
+-----------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
