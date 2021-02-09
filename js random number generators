@@ -1,0 +1,102 @@
+let n = Math.random(); ---->>>>this method gives us a number which is enclodsed brtween o to 0.999999999999 upto 16 decimal places.
+console.log(n);
+VM538:2 0.6090959953105313
+
+
+n = Math.random();
+console.log(n);
+VM544:2 0.6787325078188957
+
+--->>>>At every time the values of n is different bcaz of random.
+
+
+n = Math.random();
+n = n*5;
+n = math.floor(n);  --->>>>it is to make number to its closest whole number.
+console.log(n);
+
+=======================================
+
+prompt("what is your name : ");
+prompt("what is their name : ");
+
+var n = Math.random() * 100;
+var n = Math.floor(n) + 1;
+
+if(n == 100){
+    alert("your score is " + n + "outstanding");
+}
+else{
+    alert("your score is " + n + "\nkeep it up!!!!!!!!!");
+}
+
+===================================
+conditions
+
+for not is "!==" and so on.
+
+==================================
+n = 100;
+n = "100";
+
+>>>>>>>>>>>>>>>>>
+if(n == 100){
+    console.log("yes");
+}
+else{
+    console.log("no");
+}
+
+if this statement is executed the result is "yes".
+becaz when we use double equals to then it checks values not datatypes.
+
+>>>>>>>>>>>>>>>>
+if(n === 100){
+    console.log("yes");
+}
+else{
+    console.log("no");
+}
+
+if this statement is executed the result is "no".
+becaz when we use triple equals to then it checks datatypes.
+
+==================================
+
+array list = ["a","s","d","g","h"];
+
+list.length --->>>>5
+
+list.includes("d");    ----->>>>checks this character is in the list array or not if yes then "true" else "false".
+
+
+=============================
+to add values in array syntax is--::::
+
+list.push(values);
+list.pop();     ----removes the last value in array.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
