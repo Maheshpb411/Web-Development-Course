@@ -1,0 +1,48 @@
+document.queryselector("h1").innerhtml = "good morning";
+        it converts the "h1" into the good morning.
+        
+=>it is always a good practice to add or link  external .js file at the end of the .html file.      
+
+=========================
+...................
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css tutorial</title>
+     <link rel="stylesheet" href="tutorial.css">
+    <!-- this is type of external css -->
+    <style>
+       /* p{ */
+            /* color:red; */
+            /* background: rgb(153, 147, 153) !important; */ <!--the important is for more precedance-->
+        /* } */
+    </style>   overriding after link
+    <!-- in between style is type of internal  css syntax  -->
+</head>
+<body>
+    <h>this is a css tutorial</h>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, fugit.</p>
+    <p style="color:red">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum voluptas esse pariatur.</p>
+    <!-- it is a inline css -->
+</body>
+</html>
+
+-->>>>in this we have first html then inside that head and body then inside head and body and so on......
+the if we have to change "h" located inside the body then.....
+--->>>>document.firstelementchild.lastelementchild.firstelementchild.innerhtml = "mahesh";
+
+
+
+
+
+
+
+
+
+
+
+
+
