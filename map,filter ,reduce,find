@@ -1,0 +1,77 @@
+USing foreach------->>>>>>
+
+var number2 = [1,2,3,6,7];
+var newn2 = [];
+function double(x)
+{
+   newn2.push(x*2);
+}
+
+var numb = number2.forEach(double);
+console.log(numb);
+
+========================================================================
+
+now by using map----->>>>
+
+function double(x)
+{
+   return x*2;
+}
+var array = [2,3,4,5];
+const arr = array.map(double);
+console.log(arr);
+
+=-==============================
+==================================
+
+using foreach---->>>>>>>
+var number = [1,2,4,9,7];
+var numers = [];
+
+number.forEach(function(num){
+         if(num > 2){
+            numers.push(num);
+         }
+})
+console.log(numers);
+VM553:9 (3) [4, 9, 7]
+
+=====================================================
+
+using filter----------->>>>>>
+
+var number2 = [1,2,4,9,7];
+var numers2 = [];
+const news2 = number.filter(function(num){
+            return num > 2;
+})
+console.log(news2);
+VM890:6 (3) [4, 9, 7]
+
+=====================
+=====================
+
+using foreach ------->>
+
+var number = [2,6,4,8,10];
+
+var news = 0;
+number.forEach(function double(current)
+{
+    news += current;
+})
+console.log(news);
+
+======================
+
+using reduce------>>>>>
+const news = number.reduce(function(accu,current){
+    return accu + current;
+
+})
+console.log(news);
+
+
+
+
