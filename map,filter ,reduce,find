@@ -72,6 +72,28 @@ const news = number.reduce(function(accu,current){
 })
 console.log(news);
 
+===============================
+===============================
+
+using find ------->>>>>>>> by using 'find' we get a first element with return element.
+
+var number = [2,6,4,8,10];
+
+const nab = number.find(function(num){
+    return num > 5;
+})
+console.log(nab);
+
+
+using findindex------>>>>>>>>>>
+
+var number = [2,6,4,8,10];
+
+const nab = number.findIndex(function(num){
+    return num > 5;
+})
+console.log(nab);
+
 
 
 
