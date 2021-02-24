@@ -19,3 +19,34 @@ console.log(nab);
 =============
 =============
 
+// const nab = number.filter(function(x){
+//     return x>4;
+// })
+
+ const nab = number.filter(x => x > 4)
+
+ console.log(nab)
+ ===========
+ ===========
+ 
+ // const nab = number.reduce(function(x,y){
+//     return x+y;
+// })
+
+ const nab = number.reduce((x,y) => x+y)
+
+ console.log(nab);
+
+==========
+===========
+
+// const nab = number.find(function(x){
+//     return x > 8;
+// })
+
+const nab = number.find(x => x > 8)
+console.log(nab);
+
+
+ 
+ 
