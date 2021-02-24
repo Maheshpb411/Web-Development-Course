@@ -1,0 +1,21 @@
+var number = [2,6,4,8,10];
+
+// const nab = number.find(function(num){
+//     return num > 5;
+// })
+// console.log(nab);
+ 
+// instead of writing all above of these we write can write simply below line.
+const nab = number.map( x => x * x)
+
+//here instead of using function we can use arrow function which is  
+//"=>"
+//but when there two paRAMETERS IN THA FUNCTION then at that time 
+//we have to write number.map( (x,y) => x * y)  in that format.
+
+console.log(nab);
+
+
+=============
+=============
+
