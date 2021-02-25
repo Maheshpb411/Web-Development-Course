@@ -1,0 +1,65 @@
+index.js----->>>>>
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from "./App.jsx";
+
+
+ReactDOM.render(<App/>,document.getElementById("root"));
+
+=================
+
+App.js----->>>>>
+
+
+import React from "react";
+import Login from "./login";
+
+var isLoggedIn = false;
+
+
+
+function App(){
+  return (
+    <div className="container">
+      {isLoggedIn?<h1>Hello</h1>:<Login /> }
+      
+    </div>
+  );
+}
+export default App;
+==================
+
+login.js-->>>>>>>
+
+import React from "react";
+
+import Input from "./input";
+
+function Login() {
+  return (
+    <form className="form">
+      <Input type="text" placeholder="Username" />
+      <Input type="password" placeholder="Password" />
+      <Input type="password" placeholder="Confirm Password"/>
+      <button type="submit">Login</button>
+    </form>
+  );
+}
+
+export default Login;
+==============
+
+input.js---------->>>>>>>>>>>
+
+import react from "react";
+
+function Input(kam){
+    return (<div>
+        <input type={kam.type} placeholder={kam.placeholder}/>
+    </div>
+    );
+    
+}
+export default Input;
+
