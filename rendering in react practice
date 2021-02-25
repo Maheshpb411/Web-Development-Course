@@ -1,0 +1,72 @@
+index.js------>>>>>>>
+
+function Log(){
+    return (
+        <form className="form">
+          <Input type="text" placeholder="Username" />
+          <Input type="password" placeholder="Password" />
+          
+          <button type="submit">Login</button>
+        </form>
+      );
+}
+
+App.js---------->>>>>>>>>
+
+
+import React from "react";
+import Login from "./login";
+import Log from "./log";
+
+var isLoggedIn =true;
+
+
+
+function App(){
+  return (
+    <div className="container">
+      {isLoggedIn?<Log/>:<Login/>}
+      
+    </div>
+  );
+}
+export default App;
+
+login.js------->>>>>>>>
+
+import React from "react";
+
+import Input from "./input";
+
+
+
+function Login() {
+  return (
+    <form className="form">
+      <Input type="text" placeholder="Username" />
+      <Input type="password" placeholder="Password" />
+      <Input type="password" placeholder="Confirm Password"/>
+      <button type="submit">register</button>
+    </form>
+  );
+}
+
+export default Login;
+
+
+log.js---->>>>>>
+
+import react from "react";
+import Input from "./input"
+function Log(){
+    return (
+        <form className="form">
+          <Input type="text" placeholder="Username" />
+          <Input type="password" placeholder="Password" />
+          
+          <button type="submit">Login</button>
+        </form>
+      );
+}
+
+export default Log;
