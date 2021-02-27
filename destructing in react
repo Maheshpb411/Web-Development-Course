@@ -1,0 +1,63 @@
+index.js-------->>>>>>>
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from "./App.jsx";
+import car from "./practise";
+
+const [honda,tesla] = car;
+
+const {speedstats : {topspeed: hondatopspeed}} = honda;
+
+const {speedstats : {topspeed: teslatopspeed}} = tesla;
+
+const {colourspopular :[hondatopcolour]} = honda;
+const {colourspopular :[teslatopcolour]} = tesla;
+ReactDOM.render(
+    <table>
+        <tr>
+            <th>brand</th>
+            <th>top speed</th>
+            <th>top colour</th>
+        </tr>
+        <tr>
+            <td>{tesla.model}</td>
+            <td>{teslatopspeed}</td>
+            <td>{teslatopcolour}</td>
+        </tr>
+        <tr>
+           <td>{honda.model}</td>
+           <td>{hondatopspeed}</td>
+           <td>{hondatopcolour}</td>
+        </tr>
+    </table>,
+    document.getElementById("root")
+    );
+    
+    
+    
+    practise.js--------->>>>>>>>
+    
+    const car =
+    [
+        {
+            model:"honda",
+            colourspopular:["black","silver"],
+            speedstats:{
+                topspeed:140,
+                zerotosixty:8.5
+            }
+
+        },
+        {
+            model:"tesla",
+            colourspopular:["red","white"],
+            speedstats:{
+                topspeed:150,
+                zerotosixty:3.2
+            }
+
+        }
+    ];
+
+    export default car;
