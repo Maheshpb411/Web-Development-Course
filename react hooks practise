@@ -1,0 +1,42 @@
+index.js------>>>>>>
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from "./App.jsx";
+
+
+ReactDOM.render(
+    <App/>,
+    document.getElementById("root")
+    );
+    ================================================
+
+App.js----->>>>>>
+
+import react, { useState } from "react";
+
+function App()
+{
+  setInterval(newTime,1000);
+let tim = new Date().toLocaleTimeString();
+
+const [time,getTime] = useState(tim);
+
+function newTime()
+{
+  const newtime=new Date().toLocaleTimeString()    
+  getTime(newtime);
+}
+ return(
+   <div className="container">
+     <h1>{time}</h1>
+     <button onClick={newTime}>CHECK TIME</button>
+
+   </div>
+ );
+
+
+console.log(time);
+}
+
+export default App;
