@@ -1,0 +1,48 @@
+index.js--------->>>>>>>>
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from "./App.jsx";
+import car from "./practise";
+
+
+ReactDOM.render(
+   <App/>,
+    document.getElementById("root")
+    );
+    
+    
+App.js---------->>>>>>>>>
+
+import react, { useState } from "react";
+
+function App() {
+  const [head, sethead] = useState("hello");
+  const [mouse, setmouseover] = useState(false);
+  function handling() {
+    sethead("submitted");
+  }
+  function mouseover() {
+    setmouseover(true);
+  }
+  function mouseout(){
+    setmouseover(false);
+  }
+
+  return (
+    <div className="container">
+      <h1>{head}</h1>
+      <input type="text" placeholder="What is your name" />
+      <button
+        style={{ backgroundColor: mouse ? "red" : "white" }}
+        onClick={handling}
+        onMouseOver={mouseover}
+        onMouseOut={mouseout}>
+        Submit</button>
+
+    </div>
+  );
+}
+
+export default App;
+    
